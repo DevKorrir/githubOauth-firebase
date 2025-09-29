@@ -54,22 +54,16 @@ dependencies {
     implementation(libs.androidx.material3)
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.9.4")
 
-    // Use the Firebase BoM (manages versions)
-    implementation(platform("com.google.firebase:firebase-bom:34.3.0"))
+    // Firebase
+    implementation(platform("com.google.firebase:firebase-bom:32.7.0"))
+    implementation("com.google.firebase:firebase-auth-ktx")
 
-// Use the main auth module (KTX APIs are provided from the main module now)
-    implementation("com.google.firebase:firebase-auth")
+    // Coroutines
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
 
+    // Icons
+    implementation("androidx.compose.material:material-icons-extended:1.5.6")
 
-
-    implementation(libs.androidx.credentials)
-    implementation(libs.androidx.credentials.play.services.auth)
-    implementation(libs.googleid)
-
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.10.2")
-    implementation("androidx.compose.material:material-icons-extended:1.7.8")
-
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.10.2")
 
 
     testImplementation(libs.junit)
